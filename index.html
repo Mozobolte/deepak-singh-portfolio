@@ -9,10 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0a0f;--bg2:#111118;--bg3:#1a1a25;--sf:#16161f;--sf2:#1e1e2a;
-  --bd:rgba(255,255,255,0.07);--or:#ff6b35;--od:rgba(255,107,53,0.12);
-  --bl:#2a4b8a;--bll:#3d6bc4;--gr:#22c55e;--re:#ef4444;
-  --tx:#f0f0f5;--td:rgba(240,240,245,0.6);--tf:rgba(240,240,245,0.3);
+  --bg:#030d06;--bg2:#071a0e;--bg3:#0d2614;--sf:#0a1f10;--sf2:#102818;
+  --bd:rgba(0,230,118,0.1);--or:#00e676;--od:rgba(0,230,118,0.1);
+  --bl:#00c853;--bll:#69ffaa;--gr:#00e676;--re:#ef4444;
+  --tx:#e8fef0;--td:rgba(232,254,240,0.6);--tf:rgba(232,254,240,0.3);
   --r:16px;--rs:8px;--nh:72px;
   --f:'Lexend','Segoe UI',Arial,sans-serif;
 }
@@ -32,8 +32,8 @@ a{text-decoration:none;color:inherit;}
 .cff{width:36px;height:36px;border:1.5px solid rgba(255,107,53,.5);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .15s;}
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:1000;background:rgba(10,10,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);transition:all .3s;}
-.nav.sc{background:rgba(10,10,15,.99);box-shadow:0 4px 30px rgba(0,0,0,.5);}
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:1000;background:rgba(3,13,6,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);transition:all .3s;}
+.nav.sc{background:rgba(3,13,6,.99);box-shadow:0 4px 30px rgba(0,0,0,.5);}
 .nav-logo{font-family:var(--f);font-size:1.5rem;font-weight:800;color:var(--or);cursor:pointer;letter-spacing:-1px;}
 .nav-links{display:flex;gap:36px;}
 .nl{font-size:.9rem;font-weight:500;color:var(--td);transition:color .2s;position:relative;padding-bottom:4px;cursor:pointer;}
@@ -59,9 +59,9 @@ a{text-decoration:none;color:inherit;}
 /* BG */
 .hbg{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;}
 .blob{position:absolute;border-radius:50%;filter:blur(90px);animation:bf 8s ease-in-out infinite;}
-.b1{width:500px;height:500px;background:var(--or);opacity:.12;top:-200px;right:-100px;}
-.b2{width:400px;height:400px;background:var(--bl);opacity:.15;bottom:-100px;left:-100px;animation-delay:-3s;}
-.b3{width:280px;height:280px;background:#7c3aed;opacity:.07;top:40%;right:30%;animation-delay:-5s;}
+.b1{width:500px;height:500px;background:#00e676;opacity:.08;top:-200px;right:-100px;}
+.b2{width:400px;height:400px;background:#00c853;opacity:.1;bottom:-100px;left:-100px;animation-delay:-3s;}
+.b3{width:280px;height:280px;background:#00e676;opacity:.05;top:40%;right:30%;animation-delay:-5s;}
 @keyframes bf{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-30px) scale(1.05);}}
 .gl{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;}
 
@@ -77,7 +77,7 @@ a{text-decoration:none;color:inherit;}
 .hdesc{font-size:1.05rem;color:var(--td);line-height:1.8;max-width:520px;margin-bottom:36px;font-weight:300;}
 .hdesc strong{color:var(--or);font-weight:600;}
 .hcta{display:flex;gap:16px;margin-bottom:52px;flex-wrap:wrap;}
-.hstats{display:flex;gap:32px;flex-wrap:wrap;align-items:center;}
+.hstats{display:flex;gap:32px;flex-wrap:wrap;align-items:center;position:relative;z-index:2;}
 .si{display:flex;flex-direction:column;}
 .sv{font-size:1.8rem;font-weight:800;color:var(--tx);line-height:1;}
 .sv span{color:var(--or);}
@@ -97,7 +97,7 @@ a{text-decoration:none;color:inherit;}
 .fc3{top:50%;left:-80px;animation:fc3a 7s ease-in-out infinite -4s;}
 @keyframes fca{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
 @keyframes fc3a{0%,100%{transform:translateY(-50%);}50%{transform:translateY(calc(-50% - 12px));}}
-.scrl{position:absolute;bottom:28px;left:60px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:.65rem;color:var(--tf);letter-spacing:2px;text-transform:uppercase;font-weight:400;}
+.scrl{position:absolute;bottom:28px;left:60px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:.65rem;color:var(--tf);letter-spacing:2px;text-transform:uppercase;font-weight:400;z-index:0;pointer-events:none;}
 .slne{width:1px;height:60px;background:linear-gradient(to bottom,var(--tf),transparent);animation:sla 2s ease-in-out infinite;}
 @keyframes sla{0%,100%{opacity:.3;}50%{opacity:1;}}
 
@@ -141,10 +141,10 @@ a{text-decoration:none;color:inherit;}
 .hlcard:hover .hlcta{transform:translateX(4px);}
 
 /* CTA */
-.ctab{background:linear-gradient(135deg,#ff6b35,#e04a1a);padding:80px 24px;text-align:center;}
+.ctab{background:linear-gradient(135deg,#00c853,#00e676);padding:80px 24px;text-align:center;}
 .ctab h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:white;margin-bottom:12px;}
 .ctab p{color:rgba(255,255,255,.85);margin-bottom:32px;font-size:1.05rem;font-weight:300;}
-.ctab .btn{background:white;color:var(--or);}
+.ctab .btn{background:#030d06;color:#00e676;border:1px solid #00e676;}
 
 /* PHERO */
 .phero{position:relative;padding:80px 0 60px;overflow:hidden;}
@@ -245,7 +245,7 @@ a{text-decoration:none;color:inherit;}
 .rtbl td{padding:12px 14px;border-bottom:1px solid var(--bd);color:var(--td);font-weight:300;}
 .rtbl tr:hover td{background:var(--sf2);}
 .rp{display:inline-block;padding:3px 10px;border-radius:40px;font-size:.7rem;font-weight:700;}
-.rup{background:rgba(34,197,94,.12);color:var(--gr);border:1px solid rgba(34,197,94,.2);}
+.rup{background:rgba(0,230,118,.12);color:#00e676;border:1px solid rgba(0,230,118,.25);}
 .rdn{background:rgba(239,68,68,.1);color:var(--re);border:1px solid rgba(239,68,68,.2);}
 .rnw{background:var(--od);color:var(--or);border:1px solid rgba(255,107,53,.2);}
 .kwc{color:var(--tx);font-weight:500;}
@@ -269,11 +269,11 @@ a{text-decoration:none;color:inherit;}
 .sbody{padding:16px;}
 .squery{font-size:.74rem;color:var(--td);margin-bottom:12px;font-weight:400;}
 .sres{background:var(--sf);border-radius:var(--rs);padding:12px 14px;position:relative;}
-.pbadge{position:absolute;top:-9px;left:12px;background:var(--or);color:white;font-size:.62rem;font-weight:700;padding:2px 8px;border-radius:40px;}
+.pbadge{position:absolute;top:-9px;left:12px;background:#00e676;color:#030d06;font-size:.62rem;font-weight:700;padding:2px 8px;border-radius:40px;}
 .ssite{font-size:.66rem;color:var(--gr);margin-bottom:4px;font-weight:400;}
 .stitle2{font-size:.84rem;font-weight:600;color:#8ab4f8;margin-bottom:4px;line-height:1.3;}
 .ssnip{font-size:.72rem;color:var(--td);line-height:1.5;font-weight:300;}
-.aio{background:linear-gradient(135deg,rgba(66,133,244,.08),rgba(52,168,83,.08));border:1px solid rgba(66,133,244,.2);border-radius:var(--r);padding:20px;margin-bottom:16px;}
+.aio{background:rgba(0,230,118,.05);border:1px solid rgba(0,230,118,.2);border-radius:var(--r);padding:20px;margin-bottom:16px;}
 .aihdr{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
 .ailbl{font-size:.74rem;font-weight:600;color:#8ab4f8;}
 .aicont{font-size:.86rem;color:var(--td);line-height:1.75;font-weight:300;}
@@ -376,12 +376,12 @@ a{text-decoration:none;color:inherit;}
     <div class="hvis rv d2">
       <div class="orbit">
         <svg viewBox="0 0 300 300" class="osvg" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="150" cy="150" r="140" fill="none" stroke="rgba(255,107,53,.15)" stroke-width="1" stroke-dasharray="6,4"/>
-          <circle cx="150" cy="150" r="110" fill="none" stroke="rgba(255,107,53,.1)" stroke-width="1"/>
-          <circle cx="150" cy="150" r="75" fill="rgba(255,107,53,.04)" stroke="rgba(255,107,53,.25)" stroke-width="1.5"/>
-          <circle cx="150" cy="10" r="8" fill="#ff6b35" opacity=".8"/>
-          <circle cx="290" cy="150" r="6" fill="rgba(255,107,53,.5)"/>
-          <circle cx="40" cy="220" r="5" fill="rgba(255,107,53,.4)"/>
+          <circle cx="150" cy="150" r="140" fill="none" stroke="rgba(0,230,118,.2)" stroke-width="1" stroke-dasharray="6,4"/>
+          <circle cx="150" cy="150" r="110" fill="none" stroke="rgba(0,230,118,.12)" stroke-width="1"/>
+          <circle cx="150" cy="150" r="75" fill="rgba(0,230,118,.04)" stroke="rgba(0,230,118,.3)" stroke-width="1.5"/>
+          <circle cx="150" cy="10" r="8" fill="#00e676" opacity=".8"/>
+          <circle cx="290" cy="150" r="6" fill="rgba(0,230,118,.6)"/>
+          <circle cx="40" cy="220" r="5" fill="rgba(0,230,118,.5)"/>
         </svg>
         <div class="oc">SEO<small>Expert</small></div>
         <div class="fc fc1">&#128200; +718% Organic Views</div>
@@ -420,7 +420,7 @@ a{text-decoration:none;color:inherit;}
       </div>
     </div>
   </section>
-  <div class="ctab rv"><div class="con"><h2>Ready to dominate search rankings?</h2><p>Let&#39;s build an SEO strategy that delivers real, measurable results.</p><button class="btn" onclick="gp('contact')">Let&#39;s Talk</button></div></div>
+  <div class="ctab rv"><div class="con"><h2>Ready to dominate search rankings?</h2><p>Let&#39;s build an SEO strategy that delivers real, measurable results.</p><button class="btn" style="background:#030d06;color:#00e676;border:2px solid #00e676" onclick="gp('contact')">Let&#39;s Talk</button></div></div>
 </div>
 
 <!-- ABOUT -->
